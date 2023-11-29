@@ -13,12 +13,6 @@ import { books, booksData } from '../misc/Books';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const handleSearch = () => {
-  {
-    /* Função para tratar o menu de pesquisa */
-  }
-};
-
 const Item = ({ category }) => {
   return (
     <TouchableOpacity style={styles.item}>
@@ -83,7 +77,6 @@ const BooksScreen = ({ navigation }) => {
       </View>
       <View style={styles.wrapper}>
         <ScrollView style={styles.listContainer} horizontal={true}>
-          {/* Alterar para Touchables? */}
           <FlatList
             contentContainerStyle={styles.list}
             data={books}

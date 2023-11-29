@@ -8,10 +8,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 const ImageDetailScreen = ({ route, navigation }) => {
-  const { image, description, author, genres, file, classification } = route.params;
+  const { id, image, description, author, genres, file, classification } = route.params;
 
   return (
     <View style={styles.container}>
@@ -37,10 +36,6 @@ const ImageDetailScreen = ({ route, navigation }) => {
             file: file
           })}>
           <Text style={styles.btnText}>Ler agora</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.icon}>
-          <Icon name="star" size={25} color={'#fff'} />
         </TouchableOpacity>
       </View>
 

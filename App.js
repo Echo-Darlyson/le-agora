@@ -13,6 +13,8 @@ import SettingsScreen from './components/SettingsScreen';
 import RegistrationScreen from './components/RegistrationScreen';
 import ReadingScreen from './components/ReadingScreen';
 import ResetPasswordScreen from './components/ResetPasswordScreen';
+import AboutScreen from './components/About';
+import AchievementsScreen from './components/Achievements';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -67,6 +69,52 @@ const BooksStack = () => {
     </Stack.Navigator>
   );
 };
+
+const ConfigStack = () => {
+  return(
+    <Stack.Navigator initialRouteName='AllSettings'>
+      <Stack.Screen
+        name="AllSettings"
+        component={SettingsScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      
+      <Stack.Screen
+        name="Sobre"
+        component={AboutScreen}
+        options={{
+          headerShown: true,
+          headerStyle: {
+            backgroundColor: 'black'
+          },
+          headerTitleStyle: {
+            color: '#ff7424',
+            fontWeight: 'bold'
+          },
+          headerTintColor: '#ff7424',
+        }}
+      />
+
+      <Stack.Screen
+        name="Conquistas"
+        component={AchievementsScreen}
+        options={{
+          headerShown: true,
+          headerStyle: {
+            backgroundColor: 'black'
+          },
+          headerTitleStyle: {
+            color: '#ff7424',
+            fontWeight: 'bold'
+          },
+          headerTintColor: '#ff7424',
+        }}
+      />
+    </Stack.Navigator>
+  )
+}
 
 export default function App() {
   return (
@@ -155,7 +203,7 @@ export default function App() {
         
         <Tab.Screen
           name="Config"
-          component={SettingsScreen}
+          component={ConfigStack}
           options={{
             headerShown: false,
             tabBarIcon: () => <Icon name="gears" size={25} color="#b14100" />,

@@ -12,39 +12,16 @@ const SettingsScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.btn}>
-        <Icon name="gear" size={25} color="#b14100" />
-        <View>
-          <Text style={styles.btnTitle}>Geral</Text>
-          <Text style={styles.btnText}>Configurações gerais</Text>
-        </View>
-      </TouchableOpacity>
 
-      <TouchableOpacity style={styles.btn}>
-        <Icon name="pencil" size={25} color="#b14100" />
-        <View>
-          <Text style={styles.btnTitle}>Preferências</Text>
-          <Text style={styles.btnText}>Manusear preferências</Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.btn}>
+      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Config', { screen: 'Conquistas' })}>
         <Icon name="trophy" size={25} color="#b14100" />
         <View>
           <Text style={styles.btnTitle}>Medalhas</Text>
-          <Text style={styles.btnText}>Manusear conquistas</Text>
+          <Text style={styles.btnText}>Conquistas alcançadas</Text>
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.btn}>
-        <Icon name="book" size={25} color="#b14100" />
-        <View>
-          <Text style={styles.btnTitle}>Meus livros</Text>
-          <Text style={styles.btnText}>Favoritos | Adicionados</Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.btn}>
+      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Config', { screen: 'Sobre' })}>
         <Icon name="info-circle" size={25} color="#b14100" />
         <View>
           <Text style={styles.btnTitle}>Sobre</Text>

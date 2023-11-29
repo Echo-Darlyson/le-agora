@@ -76,20 +76,6 @@ const LoginScreen = ({ navigation }) => {
         <Text style={styles.secondaryText}>Entrar com:</Text>
 
         <View style={styles.loginOptions}>
-          <TouchableOpacity style={styles.optionBtn}>
-            <Icon name='google' size={50} color={'#ff7424'} />
-          </TouchableOpacity>
-          
-          <TouchableOpacity style={styles.optionBtn}>
-            <Icon name='apple' size={50} color={'#ff7424'} />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.optionBtn}>
-            <Icon name='windows' size={50} color={'#ff7424'} />
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.loginOptions}>
           <Text style={styles.secondaryText}>Esqueceu a senha?</Text>
           
           <TouchableOpacity onPress={goToResetPassword}>

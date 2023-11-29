@@ -86,24 +86,6 @@ const ProfileScreen = () => {
           <Text style={styles.label}>Email:</Text>
           <Text style={styles.value}>{userProfile.email}</Text>
         </View>
-
-        <View style={styles.awardsContainer}>
-          <Text style={styles.awardsTitle}>Medalhas</Text>
-
-          <View style={styles.awards}>
-            <TouchableOpacity style={styles.award}>
-              <Icon name="plus" size={50} color="#b14100" />
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.award}>
-              <Icon name="plus" size={50} color="#b14100" />
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.award}>
-              <Icon name="plus" size={50} color="#b14100" />
-            </TouchableOpacity>
-          </View>
-        </View>
       </View>
     </View>
   );
